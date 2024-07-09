@@ -27,7 +27,7 @@ public class OtpController {
 	public ResponseEntity<String > generateOpt(@PathVariable("email") String email)
 	{
 		String opt = otpService.generateOtp(email);
-		return ResponseEntity.ok("OTP sent to email: " + email + otp);
+		return ResponseEntity.ok(otp);
 
 	}
 	
