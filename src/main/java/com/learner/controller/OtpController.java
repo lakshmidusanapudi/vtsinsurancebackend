@@ -26,7 +26,7 @@ public class OtpController {
 	@PostMapping("/generate/{email}")
 	public ResponseEntity<String > generateOpt(@PathVariable("email") String email)
 	{
-		String opt = otpService.generateOtp(email);
+		String otp = otpService.generateOtp(email);
 		return ResponseEntity.ok(otp);
 
 	}
