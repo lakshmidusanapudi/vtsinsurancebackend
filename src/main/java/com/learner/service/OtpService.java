@@ -100,4 +100,12 @@ public class OtpService {
 		user.setPassword(encoder.encode(password));
 		userInfoRepository.save(user);
 	}
+	public String generateOtpForRegisteration(String email)
+	{
+		
+		String otp = String.valueOf(new Random().nextInt(999999));
+		sendOtpEmail(email, otp);
+		
+		return otp;
+	}
 }
