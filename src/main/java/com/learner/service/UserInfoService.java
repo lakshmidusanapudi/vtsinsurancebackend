@@ -60,7 +60,7 @@ public class UserInfoService {
 		user.setPhno(req.getPhno());
 		user.setPincode(req.getPincode());
 		user.setState(req.getState());
-		user.setState(req.getGender());
+		user.setGender(req.getGender());
 		return user;
 	}
 	
