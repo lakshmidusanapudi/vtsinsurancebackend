@@ -42,4 +42,9 @@ public class OtpController {
             return ResponseEntity.status(400).body("Invalid or expired OTP.");
         }
     }
+	@GetMapping("/generate-register-otp/{email}")
+	public ResponseEntity<String> getRegisterOtp(@PathVariable("email") String email)
+	{
+		return ResponseEntity.ok(otpService.generateOtpForRegisteration(email));
+	}
 }
